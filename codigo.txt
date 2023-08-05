@@ -1,0 +1,46 @@
+package mediateste;
+import java.util.Scanner;
+import java.sql.*;
+import br.com.moduloconexao.dal.Conexaobd;
+
+
+public class MediaCertificado {
+Connection connection = null;
+PreparedStatement entrega= null;
+//PreparedStatement também é uma biblioteca sql e entrega é um nome qq
+ResultSet entre = null;
+	int entrada;
+	
+		
+	
+	public MediaCertificado () {
+	connection = br.com.moduloconexao.dal.Conexaobd.conector();
+	System.out.println(connection);
+	}
+	public static void main(String[] args) {
+		
+		
+		
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Informe a média para gerar o certificado:");
+		int numero=entrada.nextInt();
+		while ((numero==5)|(numero==6)){
+			 System.out.println ("Recuperação");
+			break; 
+		}
+	
+		if(numero>=7) {
+			System.out.println("Parabéns! Imprima o Certificado.");
+			
+			
+		}
+		else {
+			System.out.println("Não aprovado! Compareça a direção.");
+			}
+		
+			
+			
+		
+	}
+
+}
